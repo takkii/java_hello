@@ -11,7 +11,7 @@ class juke{
   }
 }
 
-class jruby{
+class jruby extends juke{
 	// TimeZone
 	LocalDateTime localDateTime = LocalDateTime.now();
 	ZonedDateTime dateTime = ZonedDateTime.now(ZoneId.of("Asia/Tokyo"));
