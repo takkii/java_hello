@@ -53,6 +53,7 @@ class jruby extends juke{
       cal.setTime(date);
       // System out println call
       System.out.println(version);
+      System.out.println("java version : " + System.getProperty("java.version"));
     }
 }
 
