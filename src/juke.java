@@ -23,6 +23,7 @@ class jruby extends juke{
 	  System.out.println(localDateTime);
 	  System.out.println(dateTime);
       System.out.println(date);
+      System.out.println("java version info : " + System.getProperty("java.version"));
     }
 }
 
