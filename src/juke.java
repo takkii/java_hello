@@ -1,20 +1,17 @@
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
-import java.time.ZoneId;
-import java.util.Date;
-import java.util.Calendar;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
-class juke{
-  public static void main(String[] args){
-	jruby jr = new jruby();
+class juke {
+    public static void main(String[] args) {
+        jruby jr = new jruby();
 
-	jr.output();
-  }
+        jr.output();
+    }
 }
 
-class jruby extends juke{
-	// TimeZone
+class jruby extends juke {
+    // TimeZone
     private final String reiwa_kanji = "令和0";
     // Delete when "0" becomes "10".
     private final String reiwa_alpha = "R0";
@@ -29,31 +26,29 @@ class jruby extends juke{
     private final int nen_nichi = cal.get(Calendar.DAY_OF_YEAR);
     private final int nen_getsu = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
     private final String koyomi = sdf_koyomi.format(cal.getTime());
-    private int int_year = (nen_getsu - nen_nichi);
-    private final String string_year = Integer.toString(int_year);
     // major version number set.
     private final double TopNumber = 1.1;
     // use, fix change update version number.
     private final int lastNumber = 1;
     // use number layout control.
     private final String zero_comma = ".";
-
     // version number set.
     private final String string_number = String.valueOf(TopNumber);
     private final String version_lastnumber = Integer.toString(lastNumber);
     private final String version_number = string_number + zero_comma + version_lastnumber;
     private final String himekuriVersion = "日めくりの数え番号";
     private final String version = himekuriVersion + comma + version_number;
+    private int int_year = (nen_getsu - nen_nichi);
+    private final String string_year = Integer.toString(int_year);
 
-    public void output(){
-      // himekuri function
-      System.out.println(koyomi);
-      System.out.println("来年の1月1日まであと" + comma + string_year + "日です");
-      System.out.println(reiwa);
-      cal.setTime(date);
-      // System out println call
-      System.out.println(version);
-      System.out.println("java version : " + System.getProperty("java.version"));
+    public void output() {
+        // himekuri function
+        System.out.println(koyomi);
+        System.out.println("来年の1月1日まであと" + comma + string_year + "日です");
+        System.out.println(reiwa);
+        cal.setTime(date);
+        // System out println call
+        System.out.println(version);
+        System.out.println("java version : " + System.getProperty("java.version"));
     }
 }
-
