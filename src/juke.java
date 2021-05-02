@@ -11,9 +11,8 @@ class juke {
 }
 
 class jruby extends juke {
-    // TimeZone
-    private final String reiwa_kanji = "令和0";
     // Delete when "0" becomes "10".
+    private final String reiwa_kanji = "令和0";
     private final String reiwa_alpha = "R0";
     private final Date date = new Date();
     private final SimpleDateFormat sdf_koyomi = new SimpleDateFormat("yyyy年MM月dd日HH時mm分ss秒 ： EEEE");
@@ -38,7 +37,7 @@ class jruby extends juke {
     private final String version_number = string_number + zero_comma + version_lastnumber;
     private final String himekuriVersion = "日めくりの数え番号";
     private final String version = himekuriVersion + comma + version_number;
-    private int int_year = (nen_getsu - nen_nichi);
+    private final int int_year = (nen_getsu - nen_nichi);
     private final String string_year = Integer.toString(int_year);
 
     public void output() {
